@@ -6,8 +6,8 @@ dotenv.load_dotenv(".env")
 import os
 
 client = OpenAI(
-  organization='org-ax4JqIkt2hzZ2jbuXPdlYLtQ',
-  project='proj_vFrisMCv1olxft7dYzGi8dXB',
+  organization=os.getenv("OPEN_AI_ORGANIZATION"),
+  project=os.getenv("OPEN_AI_PROJECT"),
   api_key=os.getenv("OPEN_AI_API_KEY")
 )
 
