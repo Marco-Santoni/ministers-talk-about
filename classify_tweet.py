@@ -18,7 +18,7 @@ client = OpenAI(
   api_key=os.getenv("OPEN_AI_API_KEY")
 )
 
-df = pl.read_csv("./data/tweets.csv").head(2)
+df = pl.read_csv("./data/tweets.csv")
 df_ministers = pl.read_csv("./data/italian_ministers.csv").with_columns(
         pl.col("Twitter Handle").str.replace("@", "").alias("twitter_username")
     )
